@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node-app:
+  #  image : mahmoud899/personalbackend:tagname
+   container_name: dashboard
+   build:
+    context: .
+    dockerfile: Dockerfile
+   ports:
+   - "4000:4000"
+   environment:
+   - DOCKER_DEFAULT_PLATFORM=linux/amd64
+   - PORT=4000
